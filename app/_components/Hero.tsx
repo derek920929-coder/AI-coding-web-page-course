@@ -21,7 +21,7 @@ export function Hero() {
         </p>
 
         <h1 className="mt-5 text-6xl font-medium leading-[0.95] tracking-tight text-neutral-50 sm:text-8xl">
-          ATERON GT-S
+          ATERON GT-SR
         </h1>
 
         <p className="mt-7 max-w-[44ch] text-lg leading-8 text-neutral-400">
