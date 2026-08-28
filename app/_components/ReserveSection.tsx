@@ -21,15 +21,15 @@ export function ReserveSection() {
       id="reserve"
       className="relative overflow-hidden border-b border-white/10"
     >
-      <CarbonTexture variant="weave" className="opacity-50" />
+      <CarbonTexture variant="weave" className="opacity-25" />
       <motion.img
         aria-hidden
         src="/images/reserve.jpg"
         alt=""
         style={reduce ? undefined : { y }}
-        className="absolute inset-0 h-[120%] w-full object-cover opacity-[0.16] grayscale will-change-transform"
+        className="absolute inset-0 h-[120%] w-full object-cover opacity-[0.55] will-change-transform"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0b0c] via-[#0a0b0c]/85 to-[#0a0b0c]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0b0c] via-[#0a0b0c]/75 to-[#0a0b0c]/15" />
       <div className="relative mx-auto max-w-[1400px] px-6 py-32 md:py-44">
         <h2 className="max-w-[15ch] text-4xl font-medium leading-tight tracking-tight text-neutral-100 md:text-6xl">
           把它開出去，你就懂了

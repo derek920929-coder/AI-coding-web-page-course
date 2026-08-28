@@ -52,15 +52,15 @@ export function DesignSection() {
         </motion.div>
 
         <div className="relative min-h-[60vh] overflow-hidden bg-[#0b0b0c] lg:min-h-[120vh]">
-          <CarbonTexture variant="weave" className="opacity-40" />
+          <CarbonTexture variant="weave" className="opacity-20" />
           <motion.img
             aria-hidden
             src="/images/design.jpg"
             alt=""
             style={reduce ? undefined : { y: imgY }}
-            className="absolute inset-0 h-[112%] w-full object-cover opacity-90 grayscale"
+            className="absolute inset-0 h-[112%] w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0c] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0c]/90 via-transparent to-transparent" />
         </div>
       </div>
     </section>

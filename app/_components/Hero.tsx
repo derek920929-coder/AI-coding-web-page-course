@@ -67,11 +67,11 @@ export function Hero() {
           aria-hidden
           src="/images/hero.jpg"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-[0.34]"
+          className="absolute inset-0 h-full w-full object-cover opacity-[0.72]"
         />
-        <CarbonTexture variant="soft" className="opacity-70" />
-        <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_70%_0%,transparent,#0a0b0c_72%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0b0c] to-transparent" />
+        <CarbonTexture variant="soft" className="opacity-40" />
+        <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_70%_0%,transparent,#0a0b0c_92%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a0b0c] to-transparent" />
         <div className="relative mx-auto flex w-full max-w-[1400px] flex-1 flex-col justify-center px-6 pb-16 pt-28">
           <HeroContent />
         </div>
@@ -90,7 +90,7 @@ export function Hero() {
         src="/images/hero.jpg"
         alt=""
         style={{ y: bgY, scale: bgScale }}
-        className="absolute inset-0 h-[120%] w-full object-cover opacity-[0.34] will-change-transform"
+        className="absolute inset-0 h-[120%] w-full object-cover opacity-[0.72] will-change-transform"
       />
 
       {/* 中間層：碳紋以第三速度漂移，製造深度 */}
@@ -98,11 +98,11 @@ export function Hero() {
         style={{ y: weaveY }}
         className="pointer-events-none absolute inset-0 h-[115%] will-change-transform"
       >
-        <CarbonTexture variant="soft" className="opacity-70" />
+        <CarbonTexture variant="soft" className="opacity-40" />
       </motion.div>
 
-      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_70%_0%,transparent,#0a0b0c_72%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0b0c] to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_70%_0%,transparent,#0a0b0c_92%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a0b0c] to-transparent" />
 
       {/* 前景層：文字往上並淡出 */}
       <motion.div
