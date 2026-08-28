@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
+import { CarbonTexture } from "./CarbonTexture";
 
 type Panel = {
   value: string;
@@ -10,36 +11,37 @@ type Panel = {
   body: string;
 };
 
+// 內容依 Volkswagen Golf R（Mk8）公開資料改寫，供個人練習展示用。
 const panels: Panel[] = [
   {
-    value: "640",
-    unit: "hp",
-    meta: "動力 · 4.0L 雙渦輪 V8",
-    body: "乾式油底殼讓引擎躺得更低，重心跟著沉。7,200 轉紅線前，出力線性到你以為後面還有。",
+    value: "333",
+    unit: "PS",
+    meta: "動力 · 2.0 TSI 渦輪 · EA888 evo4",
+    body: "四缸兩公升，雙渦流渦輪。420 N·m 從 2,100 轉一路拉到 5,350 轉都在檯面上，中段補油不用等。",
   },
   {
-    value: "3.1",
+    value: "4.7",
     unit: "秒",
-    meta: "傳動 · 濕式八速雙離合",
-    body: "換檔在 40 毫秒內完成。升檔沒有斷點，降檔補油自己來，右腳只管踩。",
+    meta: "傳動 · 七速 DSG 雙離合",
+    body: "兩組離合器交替接檔，升檔幾乎沒有動力中斷。起步彈射模式一鍵備妥，0-100 只要 4.7 秒。",
   },
   {
-    value: "48:52",
-    unit: "配重",
-    meta: "底盤 · 主動式扭力分配",
-    body: "後軸電子差速器每秒修正上百次，出彎時把動力送到咬得住地的那一輪。",
+    value: "100",
+    unit: "%",
+    meta: "四驅 · R-Performance 扭力導引",
+    body: "後軸差速器用兩顆多片離合器獨立控制左右輪，出彎可把後軸可用扭力全部送到外側單輪，車頭跟著鑽進去。",
   },
   {
-    value: "410",
+    value: "357",
     unit: "mm",
-    meta: "制動 · 碳陶瓷碟盤，六活塞卡鉗",
-    body: "連續重踩不衰減，簧下再輕 21 公斤。停得住，才敢開得快。",
+    meta: "制動 · 前軸雙片式碟盤",
+    body: "前輪 357 公厘二片式碟盤，盤體與帽座分開鎖固，散熱快、簧下也輕。連續下山踏板腳感不軟。",
   },
 ];
 
 function PanelCard({ panel }: { panel: Panel }) {
   return (
-    <article className="flex h-[100dvh] w-[82vw] shrink-0 flex-col justify-center border-r border-white/10 bg-gradient-to-b from-white/[0.02] to-transparent px-8 md:w-[58vw] md:px-16">
+    <article className="flex h-[100dvh] w-[86vw] shrink-0 flex-col justify-center border-r border-white/10 bg-gradient-to-b from-white/[0.02] to-transparent px-8 sm:w-[82vw] md:w-[58vw] md:px-16">
       <p className="font-mono text-7xl tabular-nums text-neutral-50 md:text-[8.5rem] md:leading-none">
         {panel.value}
         <span className="ml-3 text-2xl text-neutral-500 md:text-3xl">{panel.unit}</span>
@@ -59,6 +61,8 @@ export function PerformancePan() {
     offset: ["start start", "end end"],
   });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-68%"]);
+  // 碳紋背景以較慢速度反向漂移，讓面板橫移時多一層深度。
+  const weaveX = useTransform(scrollYProgress, [0, 1], ["0%", "-16%"]);
 
   if (reduce) {
     return (
@@ -82,7 +86,14 @@ export function PerformancePan() {
   return (
     <section id="performance" ref={ref} className="relative h-[340vh]">
       <div className="sticky top-0 flex h-[100dvh] items-center overflow-hidden border-y border-white/10">
-        <motion.div style={{ x }} className="flex will-change-transform">
+        <motion.div
+          style={{ x: weaveX }}
+          className="pointer-events-none absolute inset-0 w-[140%] will-change-transform"
+        >
+          <CarbonTexture variant="soft" className="opacity-60" />
+        </motion.div>
+
+        <motion.div style={{ x }} className="relative flex will-change-transform">
           {panels.map((p) => (
             <PanelCard key={p.meta} panel={p} />
           ))}

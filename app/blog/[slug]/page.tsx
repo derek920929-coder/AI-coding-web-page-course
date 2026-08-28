@@ -17,7 +17,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
-  return { title: `${post.title} — ATERON 專欄`, description: post.dek };
+  return { title: `${post.title} — Golf R 專欄`, description: post.dek };
 }
 
 function formatDate(d: string) {
@@ -35,7 +35,7 @@ export default async function ArticlePage({
   if (!post) notFound();
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a0b] font-sans text-neutral-400">
+    <div className="relative min-h-screen bg-[#0a0b0c] font-sans text-neutral-400">
       <SiteHeader />
 
       <main className="mx-auto max-w-[720px] px-6 pb-32 pt-20">
@@ -57,7 +57,7 @@ export default async function ArticlePage({
         <img
           src={post.cover}
           alt={post.coverAlt}
-          className="mt-12 aspect-[16/10] w-full border border-white/10 object-cover grayscale"
+          className="carbon-weave mt-12 aspect-[16/10] w-full border border-white/10 object-cover grayscale"
         />
 
         <article className="mt-14 space-y-7">

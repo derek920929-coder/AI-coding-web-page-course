@@ -5,8 +5,8 @@ import { SiteFooter } from "../_components/SiteFooter";
 import { posts } from "./posts";
 
 export const metadata: Metadata = {
-  title: "專欄 — ATERON",
-  description: "關於動力、底盤與傳動的技術短文。",
+  title: "專欄 — Golf R",
+  description: "關於動力、底盤與傳動的技術短文。個人練習專案。",
 };
 
 function formatDate(d: string) {
@@ -18,7 +18,7 @@ export default function BlogIndex() {
   const sorted = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a0b] font-sans text-neutral-400">
+    <div className="relative min-h-screen bg-[#0a0b0c] font-sans text-neutral-400">
       <SiteHeader />
 
       <main className="mx-auto max-w-[1400px] px-6 pb-32 pt-24">
@@ -39,7 +39,7 @@ export default function BlogIndex() {
                 href={`/blog/${post.slug}`}
                 className="group grid gap-6 py-10 md:grid-cols-[300px_1fr] md:gap-12"
               >
-                <div className="overflow-hidden border border-white/10">
+                <div className="carbon-weave overflow-hidden border border-white/10">
                   <img
                     src={post.cover}
                     alt={post.coverAlt}
