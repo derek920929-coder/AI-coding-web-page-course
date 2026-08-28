@@ -25,7 +25,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-7 max-w-[44ch] text-lg leading-8 text-neutral-400">
-          霧黑車身，雙渦輪 V8，四輪主動扭力分配。看得見與看不見的細節，都為駕駛而調。
+          雙渦輪 V8，四輪主動扭力分配。
         </p>
 
         <div className="mt-11 flex flex-col gap-3 sm:flex-row">
