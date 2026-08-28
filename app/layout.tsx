@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ATERON GT-S — 性能運動汽車",
+  title: "Golf R — 四驅鋼砲",
   description:
-    "ATERON GT-S：霧黑車身、雙渦輪 V8、四輪主動扭力分配。為駕駛而生的性能運動汽車。",
+    "Volkswagen Golf R：2.0 TSI 渦輪、333 PS、4MOTION 全時四驅、七速 DSG。碳黑主題的個人練習網頁，與 Volkswagen 無關。",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Grain } from "./_components/Grain";
+import { CarbonTexture } from "./_components/CarbonTexture";
 import { SiteHeader } from "./_components/SiteHeader";
 import { SiteFooter } from "./_components/SiteFooter";
 import { Hero } from "./_components/Hero";
@@ -8,14 +9,15 @@ import { PerformancePan } from "./_components/PerformancePan";
 import { DesignSection } from "./_components/DesignSection";
 
 export const metadata: Metadata = {
-  title: "極致跑旅 — 性能運動汽車",
+  title: "Golf R — 四驅鋼砲",
   description:
-    "ATERON GT-SR：雙渦輪 V8、四輪主動扭力分配。",
+    "Volkswagen Golf R：2.0 TSI 渦輪、333 PS、4MOTION 全時四驅、七速 DSG。碳黑主題的個人練習網頁。",
 };
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#0a0a0b] font-sans text-neutral-400">
+    <div className="relative min-h-screen font-sans text-neutral-400">
+      <CarbonTexture variant="soft" fixed className="-z-10" />
       <Grain />
 
       <SiteHeader />
