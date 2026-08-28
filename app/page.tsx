@@ -10,7 +10,7 @@ import { DesignSection } from "./_components/DesignSection";
 export const metadata: Metadata = {
   title: "極致跑旅 — 性能運動汽車",
   description:
-    "ATERON GT-S：霧黑車身、雙渦輪 V8、四輪主動扭力分配。為駕駛而生的性能運動汽車。",
+    "ATERON GT-S：雙渦輪 V8、四輪主動扭力分配。",
 };
 
 export default function Home() {
